@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Narnia Residence · Livret d'accueil (démo)</title>
+<meta name="description" content="Maquette de livret d'accueil NFC pour Narnia Residence, Saint-Louis — proposition Kanzu Digital">
+<meta name="theme-color" content="#5B3A7A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f1e9; --card:#ffffff; --ink:#2a211c; --muted:#77695f; --line:#e9dfd2;
+  --brand:#5B3A7A; --ocean:#2E8A66; --hero:#5B3A7A;
+  --radius:18px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#16120f; --card:#211b17; --ink:#f3ece5; --muted:#b3a597; --line:#33291f; --brand:#B79BD6; --ocean:#5CC79A; }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 "Source Sans 3",-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.demo{background:#2a211c;color:#f6f1e9;font-size:12px;text-align:center;padding:6px 12px;letter-spacing:.02em}
+.demo a{color:#ffb98c}
+
+.hero{position:relative;height:260px;background:var(--hero) linear-gradient(160deg,rgba(0,0,0,.25),rgba(0,0,0,0) 45%,#2E8A66);overflow:hidden}
+.hero img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(20,12,8,.6))}
+.hero .txt{position:absolute;left:16px;right:16px;bottom:58px;z-index:1;color:#fff}
+.hero .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.hero h1{font:700 34px/1.05 "Cormorant Garamond",Georgia,serif;margin:4px 0 2px}
+.hero p{margin:0;font-size:15px;opacity:.92}
+/* variante logo sur fond kraft */
+.hero.light{background:#C9A472 linear-gradient(170deg,#D6B88A,#B98F5A)}
+.hero.light::after{display:none}
+.hero.light .txt{color:#3B2416;bottom:56px}
+.hero.light .lang button{border-color:rgba(59,36,22,.5);background:rgba(255,255,255,.35);color:#3B2416}
+.hero.light .lang button.on{background:#3B2416;color:#fff}
+.biglogo{position:absolute;left:50%;top:38px;transform:translateX(-50%);width:min(64%,290px);height:auto;z-index:1}
+.lang{position:absolute;top:12px;right:12px;z-index:2;display:flex;gap:4px}
+.lang button{border:1px solid rgba(255,255,255,.6);background:rgba(0,0,0,.25);color:#fff;border-radius:20px;padding:4px 11px;font:600 13px/1.4 inherit;cursor:pointer}
+.lang button.on{background:#fff;color:var(--hero)}
+
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 40px}
+.actions{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:-42px}
+.act{background:var(--card);border-radius:var(--radius);padding:14px;text-decoration:none;color:var(--ink);
+  box-shadow:0 4px 16px rgba(42,33,28,.10);display:flex;flex-direction:column;gap:2px;border:0;text-align:left;font:inherit;cursor:pointer}
+.act .ico{font-size:22px;line-height:1.2}
+.act b{font-size:15px}
+.act small{color:var(--muted);font-size:13px}
+
+section{background:var(--card);border-radius:var(--radius);margin-top:14px;border:1px solid var(--line)}
+details summary{list-style:none;padding:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--muted);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+.body{padding:0 16px 16px}
+.body p{margin:0 0 10px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row span:first-child{color:var(--muted)}
+.row b{text-align:right}
+.note{font-size:13px;color:var(--muted);margin:8px 0 0}
+.trip{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.trip:first-child{border-top:0}
+.trip .e{font-size:22px}
+.trip b{display:block}
+.trip small{color:var(--muted)}
+.btn{display:block;text-align:center;background:var(--brand);color:#fff;text-decoration:none;padding:13px;border-radius:12px;font-weight:700;margin-top:12px}
+.btn.alt{background:var(--ocean)}
+.btn.ghost{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+@media (prefers-color-scheme: dark){ .btn,.btn.alt{color:#1a1410} .btn.ghost{color:var(--brand)} }
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.review{text-align:center;padding:22px 16px}
+.review h2{margin:0 0 6px;font:700 24px/1.15 "Cormorant Garamond",Georgia,serif;color:var(--brand)}
+.review p{margin:0;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:24px}
+footer a{color:var(--brand);font-weight:700;text-decoration:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:10px 16px;border-radius:24px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9}
+.toast.show{opacity:1}
+body:not(.en) [data-en]{display:none!important}
+body.en [data-fr]{display:none!important}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <span data-fr>Maquette de démonstration · non officielle · proposée par <a href="https://innov-card.com/kanzudigital" target="_blank" rel="noopener">Kanzu Digital</a></span>
+  <span data-en>Demo mock-up · not official · by <a href="https://innov-card.com/kanzudigital" target="_blank" rel="noopener">Kanzu Digital</a></span>
+</div>
+
+<header class="hero">
+  
+  <div class="lang">
+    <button id="bFR" class="on" onclick="setLang('fr')">FR</button>
+    <button id="bEN" onclick="setLang('en')">EN</button>
+  </div>
+  <div class="txt"><div class="kicker" data-fr>Bienvenue · Maison d'hôtes</div><div class="kicker" data-en>Welcome · Guesthouse</div><h1>Narnia Residence</h1><p data-fr>Cité Vauvert · Saint-Louis du Sénégal</p><p data-en>Cité Vauvert · Saint-Louis, Senegal</p></div>
+</header>
+
+<div class="wrap">
+
+  <div class="actions">
+    <button class="act" onclick="copyWifi()">
+      <span class="ico">📶</span><b>Wi-Fi</b><small id="wifiHint"></small>
+    </button>
+    <a class="act" id="lnkDesk" href="#">
+      <span class="ico">🛎️</span><b data-fr>Accueil</b><b data-en>Host</b><small>WhatsApp</small>
+    </a>
+    <a class="act" href="#resto" onclick="openSec('resto')">
+      <span class="ico">🍽️</span><b data-fr>Où manger</b><b data-en>Where to eat</b>
+      <small>El Braisero Vauvert · 1 min</small>
+    </a>
+    <a class="act" href="#sorties" onclick="openSec('sorties')">
+      <span class="ico">🛶</span><b data-fr>Excursions</b><b data-en>Excursions</b>
+      <small data-fr>L'Île, Djoudj, pirogue</small><small data-en>The Island, Djoudj, canoe</small>
+    </a>
+  </div>
+
+  <section><details open>
+    <summary><span data-fr>🏠 Votre séjour</span><span data-en>🏠 Your stay</span></summary>
+    <div class="body">
+      <div class="row"><span data-fr>Arrivée</span><span data-en>Check-in</span><b data-fr>à partir de 14h*</b><b data-en>from 2 PM*</b></div><div class="row"><span data-fr>Départ</span><span data-en>Check-out</span><b data-fr>avant 12h*</b><b data-en>before 12 PM*</b></div><div class="row"><span data-fr>Chambres</span><span data-en>Rooms</span><b data-fr>climatisées</b><b data-en>air-conditioned</b></div><div class="row"><span data-fr>Wi-Fi</span><span data-en>Wi-Fi</span><b data-fr>inclus</b><b data-en>included</b></div><div class="row"><span data-fr>Petit-déjeuner</span><span data-en>Breakfast</span><b data-fr>sur demande</b><b data-en>on request</b></div><div class="row"><span data-fr>Taxi vers l'Île</span><span data-en>Taxi to the Island</span><b data-fr>appelé par l'accueil</b><b data-en>called by reception</b></div>
+      <p class="note" data-fr>* Horaires indicatifs de la démonstration, à confirmer.</p>
+      <p class="note" data-en>* Demo times, to be confirmed.</p>
+      <a class="btn ghost" id="lnkLate" href="#"><span data-fr>Demander un départ tardif</span><span data-en>Request a late check-out</span></a>
+      
+    </div>
+  </details></section>
+
+  <section id="resto"><details>
+    <summary><span data-fr>🍽️ Où manger à côté</span><span data-en>🍽️ Where to eat nearby</span></summary>
+    <div class="body"><div class="trip"><span class="e">🍢</span><div><b>El Braisero Vauvert</b><small data-fr>Route nationale, Cité Vauvert · environ 1 min à pied</small><small data-en>Main road, Cité Vauvert · about 1 min walk</small></div></div><p data-fr>Plats sénégalais, grillades, shawarmas, pizzas. Ouvert tous les jours jusqu'à 1 h 30.</p><p data-en>Senegalese dishes, grills, shawarma, pizza. Open daily until 1:30 am.</p><div class="two"><a class="btn ghost" href="tel:+221339613092"><span data-fr>Appeler</span><span data-en>Call</span></a><a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=16.0324319,-16.4712671&amp;travelmode=walking" target="_blank" rel="noopener"><span data-fr>Itinéraire</span><span data-en>Directions</span></a></div></div>
+  </details></section>
+
+  <section id="sorties"><details>
+    <summary><span data-fr>🗺️ Excursions & transferts</span><span data-en>🗺️ Excursions & transfers</span></summary>
+    <div class="body">
+      <div class="trip"><span class="e">🏛️</span><div><b data-fr>L'Île de Saint-Louis et le pont Faidherbe</b><b data-en>Saint-Louis Island and Faidherbe bridge</b><small data-fr>Patrimoine UNESCO</small><small data-en>UNESCO heritage</small></div></div><div class="trip"><span class="e">🦩</span><div><b data-fr>Parc des oiseaux du Djoudj</b><b data-en>Djoudj bird sanctuary</b><small data-fr>Journée · nov. à avril</small><small data-en>Full day · Nov to April</small></div></div><div class="trip"><span class="e">🛶</span><div><b data-fr>Pirogue sur la Langue de Barbarie</b><b data-en>Canoe on the Langue de Barbarie</b><small data-fr>Mangrove et îles du fleuve</small><small data-en>Mangroves and river islands</small></div></div><div class="trip"><span class="e">🐎</span><div><b data-fr>Tour de l'île en calèche</b><b data-en>Island tour by horse carriage</b><small data-fr>Calèches au départ de l'Île</small><small data-en>Carriages leave from the Island</small></div></div><div class="trip"><span class="e">🎣</span><div><b data-fr>Quartier des pêcheurs de Guet Ndar</b><b data-en>Guet Ndar fishermen's district</b><small data-fr>Retour des pirogues en fin d'après-midi</small><small data-en>Canoes return late afternoon</small></div></div><div class="trip"><span class="e">🚐</span><div><b data-fr>Transferts aéroport et Dakar</b><b data-en>Airport & Dakar transfers</b><small data-fr>Sur demande auprès de votre hôte</small><small data-en>On request from your host</small></div></div>
+      <a class="btn" id="lnkTrip" href="#"><span data-fr>Organiser une sortie ou un taxi</span><span data-en>Arrange an outing or a taxi</span></a>
+    </div>
+  </details></section>
+
+  <section><details><summary><span data-fr>🗓️ Prolonger votre séjour</span><span data-en>🗓️ Extend your stay</span></summary><div class="body"><p data-fr>Vous vous plaisez ici ? Demandez directement à votre hôte s'il reste des nuits disponibles.</p><p data-en>Enjoying your stay? Ask your host directly whether more nights are available.</p><a class="btn alt" id="lnkEvent" href="#"><span data-fr>Demander des nuits en plus</span><span data-en>Ask for extra nights</span></a></div></details></section>
+
+  <section><details>
+    <summary><span data-fr>📋 Infos pratiques & urgences</span><span data-en>📋 Practical info & emergencies</span></summary>
+    <div class="body">
+      <div class="row"><span data-fr>Accueil (WhatsApp)</span><span data-en>Host (WhatsApp)</span><a href="tel:+221776555082"><b>77 655 50 82</b></a></div><div class="row"><span data-fr>Adresse</span><span data-en>Address</span><b data-fr>Cité Vauvert, près de la BCEAO</b><b data-en>Cité Vauvert, near the BCEAO</b></div>
+      <div class="row"><span data-fr>Police</span><span data-en>Police</span><a href="tel:17"><b>17</b></a></div>
+      <div class="row"><span data-fr>Pompiers</span><span data-en>Fire brigade</span><a href="tel:18"><b>18</b></a></div>
+      <div class="row"><span>SAMU</span><a href="tel:1515"><b>1515</b></a></div>
+      <a class="btn ghost" id="lnkMap" href="#" target="_blank" rel="noopener"><span data-fr>📍 Itinéraire (à envoyer au chauffeur)</span><span data-en>📍 Directions (send to your driver)</span></a>
+    </div>
+  </details></section>
+
+  <section class="review">
+    <h2 data-fr>Un beau séjour ?</h2><h2 data-en>Enjoyed your stay?</h2>
+    <p data-fr>Votre avis aide d'autres voyageurs à nous trouver. Merci !</p>
+    <p data-en>Your review helps other travellers find us. Thank you!</p>
+    <a class="btn" id="lnkGoogle" href="#" target="_blank" rel="noopener"><span data-fr>⭐ Laisser un avis Google</span><span data-en>⭐ Leave a Google review</span></a>
+    <a class="btn ghost" id="lnkFeedback" href="#"><span data-fr>Un souci ? Dites-le-nous d'abord</span><span data-en>Any issue? Tell us first</span></a>
+  </section>
+
+  <footer id="credit"></footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ====== Données de l'établissement (à valider avec le propriétaire) ====== */
+const CONFIG = {
+  name:       "Narnia Residence",
+  wifiPass:   "",                 // vide = « code auprès de l'hôte »
+  waPhone:    "221776555082",
+  lat: 16.0324663, lng: -16.4717126,
+  googleUrl:  "https://search.google.com/local/writereview?placeid=ChIJzXU9axxXlQ4R5pGwz2CAxfY",
+  unit:       ["chambre", "room"],
+  creditName: "Kanzu Digital",
+  creditUrl:  "https://innov-card.com/kanzudigital"
+};
+/* ======================================================================== */
+
+let lang = "fr";
+const $ = (id) => document.getElementById(id);
+const L = (fr, en) => lang === "fr" ? fr : en;
+function wa(text){ return "https://wa.me/" + CONFIG.waPhone + "?text=" + encodeURIComponent(text); }
+function set(id, v){ const e = $(id); if (e) e.href = v; }
+
+function render(){
+  const u = L(CONFIG.unit[0], CONFIG.unit[1]);
+  $("wifiHint").textContent = CONFIG.wifiPass ? L("Toucher pour copier","Tap to copy") : L("Code auprès de l'hôte","Code from your host");
+  set("lnkDesk",  wa(L("Bonjour, je séjourne chez " + CONFIG.name + " (" + u + " ...). ","Hello, I'm staying at " + CONFIG.name + " (" + u + " ...). ")));
+  set("lnkLate",  wa(L("Bonjour, je souhaite un départ tardif (" + u + " ...). Est-ce possible ?","Hello, could I have a late check-out (" + u + " ...)?")));
+  set("lnkClean", wa(L("Bonjour, je souhaite un ménage / du linge propre (" + u + " ...). ","Hello, I'd like cleaning / fresh linen (" + u + " ...). ")));
+  set("lnkTrip",  wa(L("Bonjour, je souhaite organiser une sortie / un taxi : ","Hello, I'd like to arrange an outing / a taxi: ")));
+  set("lnkEvent", wa(L("Bonjour, je souhaite prolonger mon séjour / réserver d'autres nuits : ","Hello, I'd like to extend my stay / book more nights: ")));
+  set("lnkFeedback", wa(L("Bonjour, je souhaite vous signaler : ","Hello, I'd like to let you know: ")));
+  set("lnkMap",   "https://www.google.com/maps/dir/?api=1&destination=" + CONFIG.lat + "," + CONFIG.lng);
+  set("lnkGoogle", CONFIG.googleUrl);
+  const c = $("credit");
+  c.textContent = L("Livret d'accueil NFC propulsé par ","NFC welcome guide by ");
+  const a = document.createElement("a");
+  a.href = CONFIG.creditUrl; a.target = "_blank"; a.rel = "noopener"; a.textContent = CONFIG.creditName;
+  c.appendChild(a);
+}
+
+function setLang(l){
+  lang = l;
+  document.body.classList.toggle("en", l === "en");
+  document.documentElement.lang = l;
+  $("bFR").classList.toggle("on", l === "fr");
+  $("bEN").classList.toggle("on", l === "en");
+  try { localStorage.setItem("lang", l); } catch(e){}
+  render();
+}
+function openSec(id){ const d = document.querySelector("#" + id + " details"); if (d) d.open = true; }
+function toast(msg){ const el = $("toast"); el.textContent = msg; el.classList.add("show"); setTimeout(() => el.classList.remove("show"), 1800); }
+function copyWifi(){
+  if (!CONFIG.wifiPass){ toast(L("Demandez le code Wi-Fi à votre hôte","Ask your host for the Wi-Fi code")); return; }
+  try { navigator.clipboard.writeText(CONFIG.wifiPass).then(() => toast(L("Mot de passe copié","Password copied")), () => toast(CONFIG.wifiPass)); }
+  catch(e){ toast(CONFIG.wifiPass); }
+}
+let saved = "fr";
+try { saved = localStorage.getItem("lang") || (navigator.language || "fr").slice(0,2); } catch(e){}
+setLang(saved === "en" ? "en" : "fr");
+</script>
+</body>
+</html>
